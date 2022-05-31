@@ -4,7 +4,6 @@
     grid-template-columns:1fr 2fr;
     gap: 20px;
     padding: 60px;
-    animation: verschiebt 1s 1 ;
     &__img{
         border-radius: 20px;
         box-shadow: -30px -30px  $dark-color;
@@ -74,10 +73,7 @@
     .my-project-header-container {
         text-align: center;
         h3 {color: $primary-color;}
-         h2 {
-            color: white;
-            margin-bottom: 50px;
-        }
+
     }
 
     .projects-container {
