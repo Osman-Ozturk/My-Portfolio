@@ -5,7 +5,6 @@
     position:fixed;
     top: 0;
     width: 100%;
-    z-index: 1;
     &__logo {
         padding-top: 20px;
         color: #fff;
@@ -124,7 +123,7 @@
             h2 {
                 font-size: 2rem;
                 overflow: hidden; 
-                border-right: .15em solid $primary-color; 
+                border-right:3px solid $primary-color; 
                 white-space: nowrap;
                 margin: 0 auto; 
                 letter-spacing: .4rem; 
@@ -156,7 +155,7 @@
                 width: 50px;
                 height: 3px;
                 background-color: $light-color;
-                border: 1px solid white;
+                border: 1px solid $light-color;
             }
             .pfeil:nth-child(odd){
                 transform: rotate(30deg);
@@ -165,7 +164,7 @@
                 transform: rotate(-30deg) translateX(43px) translateY(11px);
             }
             &>div{
-                animation:arrow-animation 1.5s infinite;
+                animation:pfeil-animation 1.5s infinite;
                 
             }
             .pfeil-1{

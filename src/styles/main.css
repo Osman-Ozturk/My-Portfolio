@@ -4,7 +4,6 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
 }
 .nav-container__logo {
   padding-top: 20px;
@@ -107,7 +106,7 @@
 #header__home .header-content h2 {
   font-size: 2rem;
   overflow: hidden;
-  border-right: 0.15em solid #EF6D6D;
+  border-right: 3px solid #EF6D6D;
   white-space: nowrap;
   margin: 0 auto;
   letter-spacing: 0.4rem;
@@ -134,7 +133,7 @@
   width: 50px;
   height: 3px;
   background-color: #f4f4f4;
-  border: 1px solid white;
+  border: 1px solid #f4f4f4;
 }
 #header__home .pfeil-container .pfeil:nth-child(odd) {
   transform: rotate(30deg);
@@ -143,7 +142,7 @@
   transform: rotate(-30deg) translateX(43px) translateY(11px);
 }
 #header__home .pfeil-container > div {
-  animation: arrow-animation 1.5s infinite;
+  animation: pfeil-animation 1.5s infinite;
 }
 #header__home .pfeil-container .pfeil-1 {
   animation-delay: 0.3s;
@@ -248,7 +247,7 @@ footer p {
     transform: translateX(0%);
   }
 }
-@keyframes arrow-animation {
+@keyframes pfeil-animation {
   0% {
     opacity: 0;
   }
@@ -273,7 +272,6 @@ footer p {
   grid-template-columns: 1fr 2fr;
   gap: 20px;
   padding: 60px;
-  animation: verschiebt 1s 1;
 }
 .about__img {
   border-radius: 20px;
@@ -353,10 +351,6 @@ footer p {
 }
 .my-project .my-project-header-container h3 {
   color: #EF6D6D;
-}
-.my-project .my-project-header-container h2 {
-  color: white;
-  margin-bottom: 50px;
 }
 .my-project .projects-container {
   display: grid;
