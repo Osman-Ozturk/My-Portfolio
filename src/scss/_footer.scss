@@ -1,0 +1,76 @@
+#contact {
+    border-top:1px solid $primary-color ;
+    background-color: $dark-color;
+    h2{
+        color: $primary-color;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 25px;
+    }
+  .form-fields {
+    display: grid;
+    grid-template-areas:
+      "name email"
+      "subject phone"
+      "message message"
+      "button button";
+    gap: 1rem;
+    margin-bottom: 1rem;
+    button[type='submit']{
+        background-color: $primary-color;
+        font-weight: bolder;
+        font-size: 1rem;
+    }
+
+    .name {
+      grid-area: name;
+    }
+    .email {
+      grid-area: email;
+    }
+    .phone {
+      grid-area: phone;
+    }
+    .subject {
+      grid-area: subject;
+    }
+    .message {
+      grid-area: message;
+      height: 180px;
+    }
+    .btn-dark {
+      grid-area: button;
+    }
+    .input {
+      padding: 0.5rem 1rem;
+    }
+    button{
+        text-align: center;
+        background-color: $medium-color;
+    }
+  }
+}
+footer {
+  background-color: $dark-color;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  color: $light-color;
+  border-top: 1px solid $primary-color;
+  .social {
+    text-align: center;
+    a {
+      color: $light-color;
+      padding-right: 20px;
+      &:hover {
+        color: $primary-color;
+        .fa-brands {
+          transform: scale(1.5);
+        }
+      }
+    }
+  }
+  p {
+    text-align: center;
+    margin: auto;
+  }
+}

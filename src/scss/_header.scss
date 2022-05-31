@@ -1,0 +1,184 @@
+
+.nav-container{
+    display: flex;
+    justify-content: space-around;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    &__logo {
+        padding-top: 20px;
+        color: #fff;
+        animation: licht 1s infinite;
+    }
+    
+    .nav-button-container {
+        &:hover{
+            .nav-span-1{
+                background-color: $primary-color;
+                transform: translateY(16px);
+                transition: all .5s;
+            }
+            .nav-span-3{
+                background-color: $primary-color;
+                transform: translateY(-16px);
+                transition: all .5s; 
+            }
+        }
+        .nav-span {
+            display: none;
+            width: 20px;
+            height: 3px;
+            margin: 5px;
+            background-color: #fff;
+        }
+    }
+    
+    
+
+    #nav-input{  
+         display: none;
+        &:checked + #nav-button .nav-span-1{
+              transform :translateY(8px) rotate(45deg);
+          }
+          &:checked + #nav-button .nav-span-3{
+              transform:translateY(-8px) rotate(135deg) ;
+          }
+          &:checked + #nav-button .nav-span-2{
+              visibility: hidden;
+          }
+          &:checked ~ nav{
+              display: block !important;
+              position: absolute;
+              left: 0;
+              top: 70px;
+              width: 100%;
+              background-color: $dark-color;
+              opacity: 0.8;
+          }
+          &:checked ~ nav ul{
+              flex-direction: column;
+            }
+          
+     }
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+       
+        
+        &__items {
+          display: flex;
+          li {
+            padding: 1rem 1.5rem;
+            a {
+              text-decoration: none;
+              text-transform: uppercase;
+              padding-bottom: 0.5rem;
+              transition: border-color 0.5s;
+              color: #fff;
+              font-weight: bolder;
+              font-size: 1rem;
+              border-bottom: 3px  solid transparent;
+              &:hover {
+                border-color: $primary-color;
+                transition: all 1s;
+                color: $primary-color;
+              }
+            }
+          }
+        }
+    }
+
+}
+
+
+#header {
+    &__home {
+        background: url('../images/webpage.jpg') no-repeat center right/cover;
+        height: 100vh;
+        position: sticky;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        color: $light-color;
+        text-align: center;
+        .header-content {
+            position: absolute;
+            top: 20%;
+            left: 43%;
+            right: 5%;
+            
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                font-weight: bolder;
+            }
+    
+            h1 {
+                font-size: 4rem;
+                margin-bottom: 20px;
+                
+            }
+    
+            h2 {
+                font-size: 2rem;
+                overflow: hidden; 
+                border-right: .15em solid $primary-color; 
+                white-space: nowrap;
+                margin: 0 auto; 
+                letter-spacing: .4rem; 
+                animation: 
+                  schreibt 4s infinite;
+                  
+            }
+    
+            p {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 1.5rem;
+                margin-bottom: 40px;
+                color:$light-color;
+                overflow: hidden;
+                animation: 
+                verschiebt 5s ease-in;
+                border-bottom: 3px solid $primary-color;
+                font-family: monospace;
+                
+            }
+        } 
+        .pfeil-container{
+            position: absolute;
+            left: 40%;
+            top: 85vh;
+            .pfeil{
+                margin-top: 10px;
+                width: 50px;
+                height: 3px;
+                background-color: $light-color;
+                border: 1px solid white;
+            }
+            .pfeil:nth-child(odd){
+                transform: rotate(30deg);
+            }
+            .pfeil:nth-child(even){
+                transform: rotate(-30deg) translateX(43px) translateY(11px);
+            }
+            &>div{
+                animation:arrow-animation 1.5s infinite;
+                
+            }
+            .pfeil-1{
+                animation-delay:.3s ;
+            }
+            .pfeil-2{
+                animation-delay:.6s ;
+            }
+            .pfeil-3{
+                animation-delay: .9s;
+            }
+        }   
+    }
+}
+
+
