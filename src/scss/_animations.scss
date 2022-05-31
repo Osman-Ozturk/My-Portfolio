@@ -4,10 +4,9 @@
 }
 @keyframes verschiebt {
     0% { 
-        color: $primary-color;
-        transform: translateX(-150%) skew(60deg);
+        transform: translateX(-150%) skew(30deg);
     }
-    80%{ transform: translateX(30%) skew(-60deg); 
+    80%{ transform: translateX(30%) skew(-30deg); 
         
     }
     100% { transform: translateX(0%); }
