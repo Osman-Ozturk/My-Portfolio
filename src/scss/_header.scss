@@ -47,7 +47,7 @@
               visibility: hidden;
           }
           &:checked ~ nav{
-              display: block !important;
+              display: block ;
               position: absolute;
               left: 0;
               top: 70px;
@@ -71,7 +71,6 @@
           li {
             padding: 1rem 1.5rem;
             a {
-              text-decoration: none;
               text-transform: uppercase;
               padding-bottom: 0.5rem;
               transition: border-color 0.5s;
